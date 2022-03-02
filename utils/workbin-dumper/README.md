@@ -1,18 +1,20 @@
 # workbin dumper
-bodged-together python script to download everything from a workbin. stores list of previously downloaded files in a csv file that will be skipped on subsequent runs.
+bodged-together python script to download everything from a coursemology workbin. 
+stores list of previously downloaded files in a csv file; these will be skipped on subsequent runs.
 
 ## INSTALLATION:
 1. download the python file
 2. `pip3 install requests beautifulsoup4`
 
 
-## USAGE
+## USAGE:
 1. on Chrome, navigate to your coursemology workbin page (`/courses/<some_number_1>/materials/folders/<some_number_2>`)
 2. inspect element / open developer tools, navigate to the `Network` tab
 3. refresh the page, you will see an network entry (an http request) named `<some_number_2>`
 4. right click the entry, click on `Copy -> Copy as cURL (bash)`
-5. go to https://curlconverter.com/, select `Python` as the language, copypaste the output into the area specified in `workbin_dumper.py`
-6. `python3 workbin_dumper.py`
+5. go to https://curlconverter.com/, paste the cURL command as input, select `Python` as the language
+6. copypaste the output into the area specified in `workbin_dumper.py`
+7. `python3 workbin_dumper.py`
 
 the curlconverter output should look something like:
 
